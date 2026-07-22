@@ -34,7 +34,7 @@ header {
   z-index: 50;
 }
 
-.nav {
+.top-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,7 +43,7 @@ header {
   height: 6.25rem;
 }
 
-.logo img {
+.site-logo img {
   height: 3.7rem;
   display: block;
 }
@@ -94,91 +94,97 @@ header {
 /**************** HERO ************/
 .hero {
   position: relative;
-  padding: 0;
   overflow: hidden;
   background-image: url(./img/hero-bg.jpg);
   background-repeat: no-repeat;
-  background-size: 21.9rem;
-  background-position: left top;
+  background-size: 22rem;
 }
 
 .hero-section {
   display: flex;
-  padding-left: 10rem;
+  align-items: center;
+  gap: 4rem;
+  max-width: 170rem;
+}
+#carouselExampleCaptions {
+  flex: 1;
+  min-width: 0;
 }
 
 .hero-visual {
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: flex-end;
 }
 
 .hero-visual img {
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 65rem;
   height: auto;
+  object-fit: contain;
 }
 
 .hero-intro {
-  flex: 1;
-  margin-top: 11.25rem;
+  padding-top: 2rem;
+  padding-left: 7rem;
 }
 
 .label {
   display: block;
   color: var(--coral);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
 .hero h1 {
-  font-size: 3.7rem;
-  line-height: 1.5;
+  font-size: 4rem;
+  line-height: 1.3;
   font-weight: 700;
-  margin-bottom: 0.94rem;
+  margin-bottom: 1.5rem;
+  color: #2a2a2a;
 }
 
 .hero h1 .b1 {
   color: var(--blue);
 }
-
 .hero h1 .b2 {
   color: var(--coral);
 }
 
 .hero-intro p {
-  font-size: 1.38rem;
-  line-height: 1.9;
+  font-size: 1.5rem;
+  line-height: 1.8;
   color: #666;
-  margin-bottom: 2.2rem;
-  max-width: 43.75rem;
+  margin-bottom: 3rem;
+  max-width: 45rem;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 2.8rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
-  margin-bottom: 4.4rem;
+  margin-bottom: 3rem;
 }
 
-.btn {
-  padding: 0.75rem 0;
-  border-radius: 6.25rem;
+.hero-btn {
+  padding: 1.2rem 2.5rem;
+  border-radius: 10rem;
   font-weight: 500;
-  font-size: 1.37rem;
+  font-size: 1.4rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.63rem;
-  width: 16.25rem;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
 }
 
 .btn-blue {
   background: var(--blue);
-  color: #fff;
-  transition: background-color 0.4s ease;
+  color: #fff !important;
 }
 
 .btn-blue:hover {
@@ -188,12 +194,12 @@ header {
 .phone {
   display: flex;
   align-items: center;
-  gap: 1.13rem;
+  gap: 1rem;
 }
 
 .icon-phone {
-  width: 4.1rem;
-  height: 4.1rem;
+  width: 4rem;
+  height: 4rem;
   background: linear-gradient(135deg, #ff7b54, #ff5e62);
   border-radius: 50%;
   display: flex;
@@ -203,58 +209,59 @@ header {
 
 .icon-phone ion-icon {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .phone span {
   color: var(--coral);
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
-.dots {
+.custom-indicators {
   display: flex;
-  gap: 1.13rem;
-  font-weight: 500;
-  padding-left: 1.5rem;
-  font-size: 1.7rem;
-  color: #000;
+  gap: 1.5rem;
+  padding-left: 7rem;
+  margin-top: 2rem;
 }
 
-.dots .on {
-  color: var(--coral);
-  position: relative;
-}
-
-.dots span {
-  position: relative;
-  font-size: 1.7rem;
-  font-weight: 500;
+.custom-indicators button {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: #000;
   cursor: pointer;
-  transition: color 0.3s ease;
+  padding: 0 0.4rem;
+  position: relative;
+
+  transition: 0.3s;
 }
 
-.dots span:hover {
-  color: var(--coral);
-}
-
-.dots span::after {
+.custom-indicators button::after {
   content: "";
   position: absolute;
   left: 0;
-  right: 0;
-  bottom: -0.4rem;
-  height: 0.13rem;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
   background: var(--coral);
+
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: 0.3s;
+}
+.custom-indicators:has(button:hover) button.active::after {
+  transform: scaleX(0);
 }
 
-.dots span:hover::after {
+.custom-indicators button:hover::after {
   transform: scaleX(1);
 }
-/************************* SERVICES **************************/
+.custom-indicators button.active::after {
+  transform: scaleX(1);
+}
+
+/************************ SERVICES *************************/
 .services-section {
   position: relative;
   width: 100%;
@@ -292,7 +299,7 @@ header {
   z-index: 2;
 }
 
-.mark {
+.mark-down {
   position: absolute;
   inset: 0;
   display: flex;
@@ -492,28 +499,15 @@ header {
   line-height: 1.7;
   color: #777;
 }
-/**************************section 4******************************/
+/*************************section 4*****************************/
+
 .portfolio-section {
   width: 100%;
   margin: 0 auto;
   padding: 5rem 1.8rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
-}
-
-.portfolio-section::before {
-  content: "";
-  position: absolute;
-  top: 6.25rem;
-  left: 3.2rem;
-  width: 26.2rem;
-  height: 26.2rem;
-  background-image: url("./img/protfolio-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  z-index: 0;
+  overflow: visible;
 }
 
 .portfolio-title {
@@ -521,6 +515,7 @@ header {
   margin: 0 auto 2.5rem auto;
   text-align: center;
   max-width: 43.7rem;
+  font-weight: 700;
 }
 
 .portfolio-container {
@@ -535,7 +530,6 @@ header {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   position: relative;
-  margin-top: 7.5rem;
 }
 
 .portfolio-item {
@@ -555,7 +549,7 @@ header {
   transition: transform 0.5s ease;
 }
 
-/* white effect  on hover */
+/* white overlay effect on hover */
 .portfolio-item::after {
   content: "";
   position: absolute;
@@ -610,42 +604,60 @@ header {
 .portfolio-overlay p {
   font-size: 1.25rem;
   opacity: 0.9;
-  margin: 0 1.25rem 1.25rem 0;
-  line-height: 1.3;
 }
-
-.portfolio-arrow {
+/* ARROW */
+.carousel-control-prev,
+.carousel-control-next {
   position: absolute;
-  top: 50%;
+  top: 19rem;
   transform: translateY(-50%);
-  width: 2.9rem;
-  height: 2.9rem;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  background: var(--coral);
-  color: #fff;
-  border: none;
+  background: #ffb3ad;
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 3;
-  opacity: 0.7;
-  transition: all 0.2s ease;
+  z-index: 5;
+  padding: 0;
 }
 
-.portfolio-arrow:hover {
-  opacity: 1;
-  background: #ef4444;
+.carousel-control-prev {
+  left: -20px;
 }
-.arrow-left {
-  left: 0;
+
+.carousel-control-next {
+  right: -20px;
 }
-.arrow-right {
-  right: 0;
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: var(--coral);
 }
-.portfolio-section .pagination-dots {
-  margin-top: 3.75rem;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 1rem;
+  height: 1rem;
+}
+.carousel-indicators {
+  position: static;
+  margin-top: 2.5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: none;
+  margin: 0 6px !important;
+  opacity: 1 !important;
+}
+
+.carousel-indicators .active {
+  background-color: var(--coral) !important;
 }
 /***************************section 5 prices******************/
 .pricing-section {

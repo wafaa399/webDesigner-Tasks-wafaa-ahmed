@@ -13,7 +13,9 @@
     />
     <meta name="author" content="wafaa" />
     <title>NIX-Live View Page</title>
-    <link rel="icon" type="image/png" href="./img/logo1.png" />
+    <link rel="icon" type="image/png" href="img/logo1.png" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
     <script
@@ -27,9 +29,9 @@
   </head>
   <body>
     <header>
-      <div class="nav">
-        <div class="logo">
-          <img src="./img/logo.png" alt="logo of nix" />
+      <div class="top-nav">
+        <div class=".site-logo">
+          <img src="img/logo.png" alt="logo of nix" />
         </div>
         <nav class="nav-links">
           <a href="#">Home</a>
@@ -48,46 +50,136 @@
       </div>
     </header>
     <!-- section 1 hero -->
+
     <section class="hero" id="home">
       <div class="hero-section">
-        <div class="hero-intro">
-          <span class="label">WELCOME TO ONIX DIGITAL </span>
-          <h1>
-            Build <span class="b1">your website</span> the best in
-            <span class="b2">SEO</span>?
-          </h1>
-          <p>
-            This a professional looking HTML Bootstrap 5website template brought
-            to you by TemplateMo website
-          </p>
-          <div class="hero-actions">
-            <a href="#services" class="btn btn-blue">Message Us Now </a>
-            <div class="phone">
-              <div class="icon-phone">
-                <ion-icon name="call"></ion-icon>
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="2000"
+        >
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="hero-intro">
+                <span class="label">WELCOME TO ONIX DIGITAL</span>
+                <h1>
+                  Build <span class="b1">your website</span> the best in
+                  <span class="b2">SEO</span>?
+                </h1>
+                <p>
+                  This is a professional looking HTML Bootstrap 5 website
+                  template brought to you by TemplateMo website.
+                </p>
+                <div class="hero-actions">
+                  <a href="#services" class="hero-btn btn-blue"
+                    >Message Us Now</a
+                  >
+                  <div class="phone">
+                    <div class="icon-phone">
+                      <ion-icon name="call"></ion-icon>
+                    </div>
+                    <span>010-020-0340</span>
+                  </div>
+                </div>
               </div>
-              <span>010-020-0340</span>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="hero-intro">
+                <span class="label">ONLINE MARKETING</span>
+                <h1>
+                  Get the <span class="b1">best ideas</span> for
+                  <span class="b2">your website</span>
+                </h1>
+                <p>
+                  You are NOT allowed to redistribute this template ZIP file on
+                  any Free CSS collection websites. Contact us for more info.
+                  Thank you.
+                </p>
+                <div class="hero-actions">
+                  <a href="#services" class="hero-btn btn-blue">Our Services</a>
+                  <div class="phone">
+                    <div class="icon-phone">
+                      <ion-icon name="call"></ion-icon>
+                    </div>
+                    <span>090-080-0760</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="hero-intro">
+                <span class="label">VIDEO TUTORIALS</span>
+                <h1>
+                  Watch <span class="b1">our videos</span> for your
+                  <span class="b2">projects</span>
+                </h1>
+                <p>
+                  Please support us a little via PayPal if this digital
+                  marketing HTML template is useful for you. Thank you.
+                </p>
+                <div class="hero-actions">
+                  <a href="#videos" class="hero-btn btn-blue">Watch Videos</a>
+                  <div class="phone">
+                    <div class="icon-phone">
+                      <ion-icon name="call"></ion-icon>
+                    </div>
+                    <span>050-040-0320</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="dots">
-            <span class="on">1</span><span>2</span><span>3</span>
+
+          <div class="custom-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            >
+              1
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            >
+              2
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            >
+              3
+            </button>
           </div>
         </div>
+
+        <!-- Right Side Hero Banner -->
         <div class="hero-visual">
-          <img src="./img/banner-right-image.png" alt="Team working together" />
+          <img src="img/banner-right-image.png" alt="Team working together" />
         </div>
       </div>
     </section>
-
     <!-- section 2 services  -->
     <section class="services-section">
-      <!-- Background dots -->
       <div class="dotted dot-top"></div>
       <div class="dotted dot-bottom"></div>
 
       <!-- Title -->
       <div class="header-group">
-        <span class="mark">Our Services</span>
+        <span class="mark-down">Our Services</span>
         <h2 class="main-title">
           We <span class="text-blue">Provide</span> The Best Service <br />
           With <span class="text-coral">Our Tools</span>
@@ -100,7 +192,7 @@
         <div class="service-card">
           <h3 class="card-title">Learn More about our Guidelines</h3>
           <div class="card-icon">
-            <img src="./img/gift.jpg" alt="gift" />
+            <img src="img/gift.jpg" alt="gift" />
           </div>
           <div class="card-divider"></div>
           <p class="card-desc">
@@ -112,7 +204,7 @@
         <div class="service-card">
           <h3 class="card-title">Develop The Best Strategy for Business</h3>
           <div class="card-icon">
-            <img src="./img/rocket.jpg" alt="rocket img" />
+            <img src="img/rocket.jpg" alt="rocket img" />
           </div>
           <div class="card-divider"></div>
           <p class="card-desc">Get to know more about the topic in details</p>
@@ -122,7 +214,7 @@
         <div class="service-card">
           <h3 class="card-title">UI / UX Design and Development</h3>
           <div class="card-icon">
-            <img src="./img/ui-ux.jpg" alt="money" />
+            <img src="img/ui-ux.jpg" alt="money" />
           </div>
           <div class="card-divider"></div>
           <p class="card-desc">Get to know more about the topic in details</p>
@@ -142,7 +234,7 @@
     <section class="about-section">
       <div class="image-wrapper">
         <img
-          src="./img/about-left-image.png"
+          src="img/about-left-image.png"
           alt="Team working on laptop"
           class="about-image"
         />
@@ -163,7 +255,7 @@
         <div class="stats-container">
           <!--  Item 1 -->
           <div class="stat-box">
-            <img src="./img/gift.jpg" alt="" />
+            <img src="img/gift.jpg" alt="" />
             <span class="stat-number">320</span>
             <span class="stat-label">SEO Projects</span>
             <p class="stat-subtext">
@@ -173,7 +265,7 @@
 
           <!--  Item 2 -->
           <div class="stat-box">
-            <img src="./img/rocket.jpg" alt="rocket" />
+            <img src="img/rocket.jpg" alt="rocket" />
             <span class="stat-number">640</span>
             <span class="stat-label">Websites</span>
             <p class="stat-subtext">
@@ -183,7 +275,7 @@
 
           <!--  Item 3 -->
           <div class="stat-box">
-            <img src="./img/ui-ux.jpg" />
+            <img src="img/ui-ux.jpg" />
             <span class="stat-number">120</span>
             <span class="stat-label">Satisfied Clients</span>
             <p class="stat-subtext">
@@ -196,7 +288,7 @@
     <!--section4-->
     <section class="portfolio-section">
       <div class="header-group">
-        <span class="mark">OUR PORTFOLIO</span>
+        <span class="mark-down">OUR PORTFOLIO</span>
 
         <h2 class="main-title portfolio-title">
           Our Recent
@@ -204,49 +296,155 @@
           <span class="text-coral">For Clients</span>
         </h2>
       </div>
+      <div
+        id="portfolioCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="2000"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <img src="img/ink.jpeg" alt="project 1" />
+                <div class="portfolio-overlay">
+                  <h3>First Project</h3>
+                  <p>Business Marketing</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/corporate.jpeg" alt="project 2" />
+                <div class="portfolio-overlay">
+                  <h3>Second Project</h3>
+                  <p>Product Design</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/third.jpeg" alt="project 3" />
+                <div class="portfolio-overlay">
+                  <h3>Third Project</h3>
+                  <p>Space Dynamic SEO</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/desktop.jpeg" alt="project 4" />
+                <div class="portfolio-overlay">
+                  <h3>Fourth Project</h3>
+                  <p>Brand Identity</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div class="portfolio-grid">
-        <button class="portfolio-arrow arrow-left">&#8249;</button>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <img src="img/ink.jpeg" alt="project 1" />
+                <div class="portfolio-overlay">
+                  <h3>First Project</h3>
+                  <p>Business Marketing</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/corporate.jpeg" alt="project 2" />
+                <div class="portfolio-overlay">
+                  <h3>Second Project</h3>
+                  <p>Product Design</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/third.jpeg" alt="project 3" />
+                <div class="portfolio-overlay">
+                  <h3>Third Project</h3>
+                  <p>Space Dynamic SEO</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/desktop.jpeg" alt="project 4" />
+                <div class="portfolio-overlay">
+                  <h3>Fourth Project</h3>
+                  <p>Brand Identity</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="portfolio-item">
-          <img src="./img/ink.jpeg" alt="project 1" />
-          <div class="portfolio-overlay">
-            <h3>First Project</h3>
-            <p>Business Marketing</p>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <img src="img/ink.jpeg" alt="project 1" />
+                <div class="portfolio-overlay">
+                  <h3>First Project</h3>
+                  <p>Business Marketing</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/corporate.jpeg" alt="project 2" />
+                <div class="portfolio-overlay">
+                  <h3>Second Project</h3>
+                  <p>Product Design</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/third.jpeg" alt="project 3" />
+                <div class="portfolio-overlay">
+                  <h3>Third Project</h3>
+                  <p>Space Dynamic SEO</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/desktop.jpeg" alt="project 4" />
+                <div class="portfolio-overlay">
+                  <h3>Fourth Project</h3>
+                  <p>Brand Identity</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="portfolio-item">
-          <img src="./img/corporate.jpeg" alt="project 2" />
-          <div class="portfolio-overlay">
-            <h3>Second Project</h3>
-            <p>Product Design</p>
-          </div>
+        <div class="carousel-indicators position-static mt-4">
+          <button
+            type="button"
+            data-bs-target="#portfolioCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#portfolioCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#portfolioCarousel"
+            data-bs-slide-to="2"
+          ></button>
         </div>
 
-        <div class="portfolio-item">
-          <img src="./img/third.jpeg" alt="project 3" />
-          <div class="portfolio-overlay">
-            <h3>Third Project</h3>
-            <p>Space Dynamic SEO</p>
-          </div>
-        </div>
+        <!-- Prev -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#portfolioCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
 
-        <div class="portfolio-item">
-          <img src="./img/desktop.jpeg" alt="project 4" />
-          <div class="portfolio-overlay">
-            <h3>Fourth Project</h3>
-            <p>Brand Identity</p>
-          </div>
-        </div>
-
-        <button class="portfolio-arrow arrow-right">&#8250;</button>
-      </div>
-      <div class="pagination-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <!-- Next -->
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#portfolioCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
     </section>
 
@@ -256,7 +454,7 @@
       <div class="pricing-bg-right"></div>
       <div class="pricing-container">
         <div class="header-group">
-          <span class="mark">Our Plans</span>
+          <span class="mark-down">Our Plans</span>
           <h2 class="main-title">
             Select A Suitable <span class="text-blue">Plan</span> For Your
             <br />
@@ -522,7 +720,7 @@
       <div class="footer-container">
         <div class="footer-column branding-col">
           <div class="logo">
-            <img src="./img/logo.png" alt="logo of nix" />
+            <img src="img/logo.png" alt="logo of nix" />
           </div>
           <a href="#" class="footer-email">info@company.com</a>
 
@@ -590,5 +788,6 @@
         </p>
       </div>
     </footer>
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>

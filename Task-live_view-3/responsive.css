@@ -1,4 +1,4 @@
-/* Hamburger button :hidden on desktop, shown under 992px */
+/* Hamburger button :hidden on desktop, shown under 992px*/
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -587,7 +587,7 @@
     line-height: 1.4;
   }
 
-  .mark {
+  .mark-down {
     display: none;
   }
 
@@ -622,24 +622,22 @@
   }
 }
 @media (max-width: 700px) {
-  .mark {
+  .mark-down {
     display: none;
   }
 
   .pricing-container {
     padding: 0 0.7rem;
-    width: 100%;
+
     box-sizing: border-box;
   }
 
   .pricing-grid {
     grid-template-columns: 1fr;
-    width: 100%;
   }
 
   .pricing-card {
-    width: 100%;
-    max-width: 13.8rem;
+    max-width: 15.8rem;
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -677,7 +675,7 @@
     line-height: 1.4;
   }
 
-  .mark {
+  .mark-down {
     display: none;
   }
 
@@ -685,7 +683,6 @@
   .stats-container {
     grid-template-columns: 1fr;
   }
-
   /*Portfolio */
   .portfolio-overlay {
     width: 100%;
